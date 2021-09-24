@@ -62,12 +62,13 @@ developing your own process.
 
 - Add a new toy when the toy form is submitted
 
-  - How I debugged:
+  - How I debugged: Viewed Console and Network logs, as well as the Rails server terminal > saw the ToyController was uninitialized error - but saw that there was a typo in the controller
 
 - Update the number of likes for a toy
 
-  - How I debugged:
+  - How I debugged: Viewed Console - unexpected end of JSON input error - The reason for this specific error is that we expect the server to return a string of JSON-formatted data, but the server is not returning any content. The update method wasn't rendering any json.
 
 - Donate a toy to Goodwill (and delete it from our database)
 
-  - How I debugged:
+  - How I debugged: Viewed Console - 404 not found error - viewed Network > no route matched Delete > needed to add :destroy to the route file
+ 
